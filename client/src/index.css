@@ -1,0 +1,255 @@
+*{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+  border-radius: 2vw;
+}
+.homeimg{
+  height: 60vh;
+  width: 40vw;
+  grid-column: 15/21;
+  grid-row:5/20;
+  border-radius: 5vw;
+}
+.home{
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+  text-align: left;
+  grid-row: 8/13;
+  grid-column: 2/11;
+  /* font-family: "Sofia", sans-serif; */
+
+
+
+  
+}
+.title{
+  font-family: 'Berkshire Swash', Helvetica, sans-serif;
+  font-size: 10vw;
+  color:white;
+  text-shadow: #05386B 0.7vw 0.8vw ;
+}
+.desc{
+  font-size: 1.8vw;
+ color:#05386B;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 2vw;
+  font-weight: bolder;
+    color: black;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.mainbox{
+  background-color: #5CDB95;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  grid-template-rows: repeat(21,1fr);
+  grid-template-columns: repeat(21,1fr);
+}
+.navbox{
+  color:black;
+  background-color: aquamarine;
+  border: solid ;
+  border-radius: 1vw;
+  padding: 1vw;
+  grid-row: 2;
+  grid-column: 2/21;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.input{
+  text-align: center;
+  margin-top: 0.5vw;
+  height:8vh;
+  width: 20vw;
+  border-radius: 2vw;
+  font-size: 1.2vw;
+}
+.button{
+  height: 4.5vh;
+  width: 8vw;
+  border-radius: 2vw;
+  font-size: 1.5vw;
+}
+.loginbox{
+  background-color: aquamarine;
+  height: 40vh;
+  width: 30vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-column: 9/13;
+  grid-row: 8/15;
+  border: solid;
+  border-radius: 1vw;
+  align-items: center;
+  font-size:2.5vw;
+}
+.nav_box{
+  color:black;
+  border-radius: 1vw;
+   width: 40vw;
+   font-weight: bolder;
+   font-size: 1.4vw;
+   display:flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.chatbox::-webkit-scrollbar {
+  display: none;
+}
+.chatbox{
+  text-align: center;
+  grid-column: 2/21;
+  grid-row: 5/19;
+  border: solid black;
+  border-radius: 1vw;
+  font-size:3vw;
+  overflow: scroll;
+  background-color:aquamarine;
+  
+  
+  
+}
+.chat{
+  font-size: 1vw;
+}
+.user{
+  margin:0px;
+  font-size: 1.2vw;
+  background-color:#05386B;
+  padding: 0.5vw;
+  color: whitesmoke;
+  width: fit-content;
+  border-radius: 0.5vw;
+
+}
+.chat-title{
+  font-size: 3vw;
+  text-shadow:none;
+  color: #05386B;
+}
+.postbox{
+  margin: 0.3vw;
+  background-color: white;
+  width: fit-content;
+  height: auto;
+  justify-content: space-around;
+  border: solid;
+  overflow:hidden;
+  border-radius: 1vw;
+  align-items:baseline;
+  padding: 1vw;
+  text-align: left;
+  font-size:1.2vw;
+}
+.newpostbox{
+  display:flex;
+  align-items: center;
+  background-color: aquamarine;
+  justify-content: space-around;
+  border: solid;
+  grid-column: 2/21;
+  grid-row:20/21;
+  border-radius: 1vw;
+  padding: 1vw;
+  font-size:1.2vw;
+}
+.aboutbox{
+  background-color: aquamarine;
+  height: fit-content;
+  border:solid black;
+  border-radius: 2vw;
+  padding: 2vw;
+  grid-row: 10;
+  grid-column: 2/21;
+  font-size:1.4vw;
+}
+
+.message{ height: 5vw;
+   margin: 0.2vw; 
+   width: 83vw;
+   border-radius: 2vw; 
+  }
+  .button{
+         height: 9vh;
+   }
+
+
+
+
+
+
+@media (orientation: portrait) {
+  body{
+    border-radius: 10vw;
+  }
+  .nav_box{
+    font-size: 2.5vw;
+  }
+  .logo{
+    font-size: 3vw;
+  }
+  .homeimg {
+    height: 40vh;
+    width: 70vw;
+    grid-column: 4/20;
+    grid-row:8;
+  }
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 5/18;
+    grid-row:12
+  }
+  .title {
+    text-align: center;
+  }
+  .desc {
+    width: 100%;
+    font-size: 3vw;
+  }
+  .loginbox{
+    font-size: 5vw;
+    height: 40vh;
+    width: 60vw;
+  }
+  .input{
+    width: 45vw;
+    height: 5vh;
+    font-size: 3vw;
+    text-align: center;
+  }
+  .button{
+    width: 20vw;
+    height: 3.5vh;
+    font-size: 4vw;
+  }
+  .newpostbox{
+    display: flex;
+  }
+  .chatbox{
+    font-size: 4vw;
+  }
+  .postbox{
+    font-size: 3.3vw;
+  }
+  .user{
+    font-size: 3.3vw;
+  }
+  .aboutbox{
+    grid-column: 2/21;
+    font-size: 2vw;
+    height: 60vw;
+  }
+}
