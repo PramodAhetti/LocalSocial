@@ -12,12 +12,12 @@ const Posts = (props) => {
   curpost.current.style.float="left";
   curpost.current.style.clear="both";
 }
- },[])
+ },[props])
 
   return (
     <div ref={curpost} className='postbox'>
          <sub className='user'>{props.post.name}</sub>
-         <sub>{" : "+props.post.message}</sub>
+         <sub className='message'>{" : "+props.post.message}</sub>
  
     </div>
 

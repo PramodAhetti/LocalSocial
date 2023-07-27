@@ -1,10 +1,13 @@
 import React from 'react'
 import axios from 'axios'
 import { useSelector,useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
+
+
 export default function Signup() {
   const user=useSelector(state=>state.user)
   const dispatch=useDispatch();
-
+  const navigate=useNavigate();
 
   const newuser=async ()=>{
           let userdata={name:document.getElementById('name').value,
@@ -18,9 +21,10 @@ export default function Signup() {
             userdata.token=res.data.token;
             console.log(userdata);
             dispatch({type:'NEW',payload:userdata});
+            navigate('/chat')
           }catch(error){
             alert(error.response.data.err);
-            console.log(error.response.data.err);
+            navigate('/signup')
           }
 
   }

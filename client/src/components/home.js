@@ -1,4 +1,5 @@
 import React from 'react'
+
 export default function Home() {
   return (
    
@@ -8,6 +9,7 @@ export default function Home() {
     <div className='title'>.CodeBook</div>
     <div className='desc'>...Connect with the other developers,make friends,develop,share,post and ask queries...</div>
     </div>
+   
     </>
   )
 }

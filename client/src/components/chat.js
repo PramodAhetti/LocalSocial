@@ -2,6 +2,7 @@ import React, { useState, useEffect,useRef } from 'react';
 import Posts from './posts';
 import axios from 'axios';
 import { useSelector,useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Chat() {
@@ -10,7 +11,7 @@ export default function Chat() {
   const allPosts=useSelector(state=>state.posts)
   const dispatch=useDispatch();
   let message=useRef();
-
+  const navigate=useNavigate();
 
   const newpost = async () => {
     try {
@@ -22,6 +23,7 @@ export default function Chat() {
       setReload(!reload);
     } catch (error) {
       alert(error.response.data.err);
+      navigate('/');
     }
   };
 
@@ -36,6 +38,7 @@ export default function Chat() {
         dispatch({type:'SETPOSTS',payload:response});
       } catch (error) {
          console.log(error);
+         navigate('/')
       }
     };
 

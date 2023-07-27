@@ -8,9 +8,9 @@ export default function Nav() {
     <div className='navbox'>
       <div className="logo">@DEVCONNECT</div>
       <nav className='nav_box'>
-        <Link to='/'>HOME</Link>
-        <Link to='/about'>ABOUT</Link>
-        {user===undefined ?(<><Link to='/login'>LOGIN</Link><Link to='/signup'>SIGNUP</Link></>):(<><Link to='/chat'>CHAT</Link><Link to='/login'>{'@'+user}</Link></>)}
+        <Link className='routes' to='/'>HOME</Link>
+        <Link className='routes'  to='/about'>ABOUT</Link>
+        {user===undefined ?(<><Link className='routes'  to='/login'>LOGIN</Link><Link className='routes'  to='/signup'>SIGNUP</Link></>):(<><Link to='/chat'>CHAT</Link><Link to='/login'>{'@'+user}</Link></>)}
       </nav>
       <Outlet />
     </div>
