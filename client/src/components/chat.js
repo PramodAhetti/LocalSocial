@@ -34,7 +34,6 @@ export default function Chat() {
       try {
         let response = await axios.post('https://dev-book.onrender.com/post/all', { token: user.token });
         response=response.data;
-        console.log(response);
         dispatch({type:'SETPOSTS',payload:response});
       } catch (error) {
          console.log(error);
@@ -60,6 +59,9 @@ export default function Chat() {
       <div className='chatbox'>
          <div className='title chat-title'>CHAT</div>
          <br></br>
+         {
+            console.log("here",allPosts)
+         }
         {allPosts.map(postss => (
           <Posts key={postss._id} post={postss} />
 

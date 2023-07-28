@@ -9,6 +9,7 @@ const Posts = (props) => {
     curpost.current.style.float="right";
     curpost.current.style.clear="both";
 }else{
+  
   curpost.current.style.float="left";
   curpost.current.style.clear="both";
 }

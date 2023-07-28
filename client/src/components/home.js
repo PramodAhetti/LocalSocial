@@ -4,9 +4,14 @@ export default function Home() {
   return (
    
     <>
-    <img className= "homeimg" alt='imagehere' src="https://www.iss.nus.edu.sg/images/default-source/default-album/software-dev.jpg?Status=Master&sfvrsn=aa8aa05f_0"></img>
+    <div className='homeimage' />
     <div className='home'>
-    <div className='title'>.CodeBook</div>
+    <div className='title'>INNOVATE.</div>
+    <div className='title'>CONNECT.</div>
+    <div className='title'>INFLUENCE.</div>
+    <br></br>
+    <br></br>
+    <br></br>
     <div className='desc'>...Connect with the other developers,make friends,develop,share,post and ask queries...</div>
     </div>
    
