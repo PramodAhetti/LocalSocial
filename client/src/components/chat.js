@@ -13,13 +13,15 @@ export default function Chat() {
   let message=useRef();
   const navigate=useNavigate();
 
-  const newpost = async () => {
+  const newpost = () => {
     try {
       let data = {
         message: message.current.value,
         token: user.token
       };
-      await axios.post('https://dev-book.onrender.com/post/new', data);
+      axios.post('https://dev-book.onrender.com/post/new',data).catch((err)=>{
+        alert('try again');
+      });
       message.current.value='';
       setReload(!reload);
 
@@ -71,7 +73,8 @@ export default function Chat() {
       </div>
       <div className='newpostbox'>
         <input className="message"  ref={message} id='message'></input>
-        <button className="button send" onClick={newpost} ></button>
+        <button className="button send" 
+        onClick={newpost} ></button>
       </div>
     </>
   );
