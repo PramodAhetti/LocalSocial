@@ -20,7 +20,9 @@ export default function Chat() {
         token: user.token
       };
       await axios.post('https://dev-book.onrender.com/post/new', data);
+      message.current.value='';
       setReload(!reload);
+
     } catch (error) {
       alert(error.response.data.err);
       navigate('/');
@@ -69,7 +71,7 @@ export default function Chat() {
       </div>
       <div className='newpostbox'>
         <input className="message"  ref={message} id='message'></input>
-        <button className="button" onClick={newpost} >submit</button>
+        <button className="button send" onClick={newpost} ></button>
       </div>
     </>
   );

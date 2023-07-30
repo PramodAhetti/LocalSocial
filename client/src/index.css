@@ -107,6 +107,7 @@ body {
   display: none;
 }
 .chatbox{
+  border-radius: 2vw;
   text-align: center;
   grid-column: 2/21;
   grid-row: 5/19;
@@ -153,8 +154,10 @@ body {
   font-size:1.8vw;
   color: #383838;
   background-color:white;
+  border-radius: 1vw;;
 }
 .newpostbox{
+  border-radius: 2vw;
   display:flex;
   align-items: center;
   justify-content: space-around;
@@ -174,15 +177,25 @@ body {
   font-size:1.5vw;
 }
 
-.message{ height: 5vw;
-   margin: 0.2vw; 
+.message{ 
    width: 83vw;
-   font-size:1.7vw;
+   height: 5vh;
+   font-size: 1.8vw;
+   border-radius: 2vw;
+   margin: 1vw;
   }
   .button{
-         height: 7vh;
-   }
+         height: 5vh;
 
+   }
+.send{
+           background-image:url('https://png.pngtree.com/png-clipart/20211009/original/pngtree-send-flat-icon-png-image_6848781.png');
+            background-position: center;
+           background-size: 12vw;
+           height: 5vw;
+           width: 5vw;
+           border-radius: 8vw;
+}
 
 
 
@@ -201,17 +214,16 @@ body {
   }
   .home{
     text-align: center;
+
   }
   .logo{
     font-size: 3vw;
   }
   .homeimage{
-    grid-row:5;
-    grid-column: 3/20;
     background-size: 100vw;
-    height: 60vw;
-    width: 60vw;
-    border-radius: 30vw;
+    height: 50vw;
+    width: 50vw;
+    border-radius: 25vw;
   }
   .routes{
     margin-left:1vw;
@@ -225,7 +237,7 @@ body {
     grid-row:11;
   }
   .title {
-    font-size: 13vw;
+    font-size: 12vw;
   }
   .desc {
     width: 100%;
@@ -251,6 +263,12 @@ body {
     height: 3.5vh;
     font-size: 3vw;
   }
+  .send{
+    background-size: 14vw;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 8vw;
+  }
   .chatbox{
     font-size: 4vw;
   }
@@ -262,6 +280,8 @@ body {
   }
   .message{
     font-size: 3.5vw;
+    border-radius: 2vw;
+    margin: 1vw;
   }
   .aboutbox{
     grid-column: 2/21;
