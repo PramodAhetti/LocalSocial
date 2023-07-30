@@ -14,7 +14,7 @@ function App() {
         <BrowserRouter className='mainbox'>
           <Navbar className="navbox"></Navbar>
             <Routes>
-              <Route path='/' element={<Home/>} />
+              <Route path='/' element={<Home />} />
               <Route path='/login' element={<Login/>} />
               <Route path='/signup' element={<Signup/>} />
               <Route path='/chat' element={<Chat/>} />

@@ -25,7 +25,7 @@ export default function Login() {
         dispatch({type:'LOGIN',payload:data});
         navigate('/chat');
       }catch(error){
-        alert(error.response.data.err);
+        alert("try again");
         navigate('/login');
       }
   }

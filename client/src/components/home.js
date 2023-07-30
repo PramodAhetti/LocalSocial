@@ -3,8 +3,7 @@ import React from 'react'
 export default function Home() {
   return (
    
-    <>
-    <div className='homeimage' />
+    <div className='homecomp'>
     <div className='home'>
     <div className='title'>INNOVATE.</div>
     <div className='title'>CONNECT.</div>
@@ -14,7 +13,7 @@ export default function Home() {
     <br></br>
     <div className='desc'>...Connect with the other developers,make friends,develop,share,post and ask queries...</div>
     </div>
-   
-    </>
+    <div className='homeimage' />
+    </div>
   )
 }

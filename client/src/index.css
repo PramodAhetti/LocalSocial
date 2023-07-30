@@ -3,30 +3,20 @@
   text-decoration: none;
 
 }
-
-.home{
+.homecomp{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  grid-row: 6/13;
+  grid-row: 6/16;
   grid-column: 3/20;
-  /* font-family: "Sofia", sans-serif; */
-
-
-
-  
-
 }
+
 .homeimage{
  background-image: url(https://www.alura.com.br/artigos/assets/hello-world-em-varias-linguagens/imagem1.gif);
  background-position: center;
  background-size:45vw; 
- grid-row: 5/17;
- border-radius: 30vw;
-  height: 100%;
-  width: 100%;
-  grid-column: 13/21;
+
+ border-radius: 15vw;
+  height: 30vw;
+  width:35vw;
 }
 .title{
   font-family:'Courier New', Courier, monospace;
@@ -37,7 +27,7 @@
 }
 
 .desc{
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   color: rgb(114, 113, 113);
 }
 .logo{
@@ -123,19 +113,22 @@ body {
   font-size:3vw;
   overflow: scroll;
   border:solid black;
+  color: white;
   
   
   
 }
 .chat{
   font-size: 1vw;
+ 
 }
 .user{
   margin:1px;
-  font-size: 1.8vw;
-  background-color:rgb(98, 236, 38);
+  font-size: 2vw;
+  background-color: #666666;
   padding: 0.5vw;
-  color: black;
+  color:white;
+  border-radius: 1vw;
   width: fit-content;
   border:2px solid black;
 
@@ -149,16 +142,17 @@ body {
 }
 .postbox{
   margin: 0.3vw;
-  background-color: white;
   width: fit-content;
   height: auto;
   justify-content: space-around;
-  border: solid;
+  border: solid black;
   overflow:hidden;
   align-items:baseline;
   padding: 1vw;
   text-align: left;
-  font-size:1.2vw;
+  font-size:1.8vw;
+  color: #383838;
+  background-color:white;
 }
 .newpostbox{
   display:flex;
@@ -200,29 +194,43 @@ body {
   }
   .nav_box{
     font-size: 3vw;
+
+  }
+  .navbox{
+     justify-content: space-around; 
+  }
+  .home{
+    text-align: center;
   }
   .logo{
     font-size: 3vw;
   }
   .homeimage{
-    grid-row:5/16;
+    grid-row:5;
     grid-column: 3/20;
-    background-size: 130vw;
+    background-size: 100vw;
+    height: 60vw;
+    width: 60vw;
     border-radius: 30vw;
-
   }
-  .home {
+  .routes{
+    margin-left:1vw;
+    margin-right:1vw;
+    font-size: 3vw;
+  }
+  .homecomp {
     flex-direction: column;
-    justify-content: center;
-    grid-column: 3/18;
-    grid-row:18;
+    align-items: center;
+    grid-column: 5/18;
+    grid-row:11;
   }
   .title {
-    font-size: 15.5vw;
+    font-size: 13vw;
   }
   .desc {
     width: 100%;
-    font-size: 3.5vw;
+    font-size: 2.5vw;
+    margin-bottom: 5vw;
   }
   .loginbox{
     font-size: 5vw;
