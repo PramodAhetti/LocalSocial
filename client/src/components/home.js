@@ -5,13 +5,13 @@ export default function Home() {
    
     <div className='homecomp'>
     <div className='home'>
-    <div className='title'>INNOVATE.</div>
     <div className='title'>CONNECT.</div>
-    <div className='title'>INFLUENCE.</div>
+    <div className='title'>SHARE.</div>
+    <div className='title'>RESCUE.</div>
     <br></br>
     <br></br>
     <br></br>
-    <div className='desc'>...Connect with the other developers,make friends,develop,share,post and ask queries...</div>
+    <div className='desc'>connect with other resuce agencies to save more lives.</div>
     </div>
     <div className='homeimage' />
     </div>

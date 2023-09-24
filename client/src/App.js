@@ -6,7 +6,7 @@ import Login from './components/login'
 import Chat from './components/chat'
 import Signup from './components/signup'
 import About from "./components/about";
-
+import Map from "./components/Map"
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
               <Route path='/signup' element={<Signup/>} />
               <Route path='/chat' element={<Chat/>} />
               <Route path='/about' element={<About/>} />
+              <Route path='/map' element={<Map/>} />
             </Routes>
         </BrowserRouter>
         </div>

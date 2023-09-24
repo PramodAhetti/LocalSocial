@@ -10,7 +10,8 @@
 }
 
 .homeimage{
- background-image: url(https://www.alura.com.br/artigos/assets/hello-world-em-varias-linguagens/imagem1.gif);
+  background-color: white;
+ background-image: url(https://img.lovepik.com/free-png/20211210/lovepik-rescue-team-png-image_401478426_wh1200.png);
  background-position: center;
  background-size:45vw; 
 
@@ -43,8 +44,8 @@ body {
 }
 
 .mainbox{
-  background-color: rgb(255, 255, 0);
-  display: grid;
+  background-color:white;
+ display: grid;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -104,6 +105,9 @@ body {
    justify-content: space-between;
 }
 .chatbox::-webkit-scrollbar {
+  display: none;
+}
+.aboutbox::-webkit-scrollbar {
   display: none;
 }
 .chatbox{
@@ -169,11 +173,12 @@ body {
 }
 .aboutbox{
   color: black;
-  height: fit-content;
+  overflow: scroll;
   border:solid black;
   padding: 2vw;
   grid-row: 10;
   grid-column: 2/21;
+  grid-row: 4/21;
   font-size:1.5vw;
 }
 
@@ -197,7 +202,10 @@ body {
            border-radius: 8vw;
 }
 
-
+.mapbox{
+  grid-column: 2/21;
+  grid-row: 4/22;
+}
 
 
 
