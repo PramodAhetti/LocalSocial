@@ -1,8 +1,8 @@
 let jwt=require('jsonwebtoken');
 async function userauth(req,res,next){
     try{
-        let token=await jwt.verify(req.body.token,process.env.SECRET);
-        req.body.user_id=token.user.id; 
+        let token=await jwt.verify(req.body.token,process.env.SECRETKEY);
+        req.body.userId=token.user.id; 
         req.body.name=token.user.name;
         next();
     }catch(err){

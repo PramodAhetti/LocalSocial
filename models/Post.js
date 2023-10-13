@@ -8,6 +8,14 @@ let post=new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         required:true
        },
+       latitude:{
+          type:Number,
+          required:true
+       },
+       longitude:{
+         type:Number,
+         required:true
+      },
        date:{
           type:String,
           required:true

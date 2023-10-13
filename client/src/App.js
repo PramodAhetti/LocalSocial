@@ -1,28 +1,20 @@
-import { BrowserRouter,Route,Routes } from "react-router-dom";
-
-import Navbar from './components/nav'
-import Home from './components/home'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from './components/login'
-import Chat from './components/chat'
-import Signup from './components/signup'
-import About from "./components/about";
-import Map from "./components/Map"
+import Home from "./components/home";
+import Nearpost from "./components/nearpost";
 
 function App() {
   return (
-       <div className="mainbox">
-        <BrowserRouter className='mainbox'>
-          <Navbar className="navbox"></Navbar>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/login' element={<Login/>} />
-              <Route path='/signup' element={<Signup/>} />
-              <Route path='/chat' element={<Chat/>} />
-              <Route path='/about' element={<About/>} />
-              <Route path='/map' element={<Map/>} />
-            </Routes>
-        </BrowserRouter>
-        </div>
+    <div className="App">
+      <BrowserRouter className="App">
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/nearposts" element={<Nearpost />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

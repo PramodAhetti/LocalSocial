@@ -6,23 +6,46 @@ const posts=require('../../models/Post')
 //test route
 
 //route to get all the posts
-router.post('/all',userauth,async(req,res)=>{
-    try{
-        let allposts=await posts.find().sort({['date']:1});
-        res.send(allposts);
-    }catch(err){
-        res.status(400).json({err:"server error"});
+router.post('/all', userauth, async (req, res) => {
+    try {
+        const { latitude, longitude, radius } = req.body;
+
+        if (!latitude || !longitude || !radius) {
+            return res.status(400).json({ error: "Latitude, longitude, and radius are required." });
+        }
+
+        // Convert radius from kilometers to degrees (for MongoDB's $geoWithin operator)
+        const radiusInDegrees = radius / 111.32;
+
+        // Perform a geospatial query to find posts within the specified radius
+        let nearbyPosts = await posts.find({
+            latitude: {
+                $gte: latitude - radiusInDegrees,
+                $lte: latitude + radiusInDegrees
+            },
+            longitude: {
+                $gte: longitude - radiusInDegrees,
+                $lte: longitude + radiusInDegrees
+            }
+        });
+
+        res.json(nearbyPosts);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Server error" });
     }
-})
+});
 
 
 //route to add new post
 router.post('/new',userauth,async (req,res)=>{
      try{
         let newpost=new posts({
-            owned_id:req.body.user_id,
+            owned_id:req.body.userId,
             message:req.body.message,
             name:req.body.name,
+            latitude:req.body.latitude,
+            longitude:req.body.longitude,
             date:Date.now()
          });
          await newpost.save();
