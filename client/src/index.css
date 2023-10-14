@@ -56,9 +56,10 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
   background-color: rgb(110, 159, 249);
   padding: 2vw;
   width: 30vw;
-  height: 6vh;
-  margin: 2vw;
+  margin: 3vw;
+  padding: 2vw;
   color:black;
+  text-align: center;
 }
 
 
@@ -82,6 +83,7 @@ body {
   grid-template-rows: repeat(21,1fr);
   grid-template-columns: repeat(21,1fr);
   background-color: black;
+  border-radius: 0vw;
 }
 
 .loginbox{
@@ -114,14 +116,13 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
 
 .postbox{
   font-weight: bold;
-  margin: 0.6vw;
+  margin: 2vw;
   width: fit-content;
-  height: 6vh;
+  padding: 3vw;
+
   justify-content: space-around;
   border: solid black;
-  align-items:center;
-  padding: 1vw;
-  text-align: center;
+  padding: 3vw;
   background-color:rgba(255, 255, 255, 0.9) ;
   border-radius: 1vw;;
 }
@@ -132,17 +133,16 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
   height: 5vh;
   font-size: 4vw;
   border-radius: 2vw;
-  margin: 1vw;
  }
  .user{
-  margin:vw;
+  margin:1vw;
   font-size: 5vw;
   background-color:rgb(110, 159, 249);
   padding: 0.5vw;
   color:white;
   border-radius: 1vw;
   width: fit-content;
-  border:2px solid black;
+  border:5px black;
 
 }
 .NewBox{
@@ -165,7 +165,6 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
   height: 50vh;
   width: 80vw;
   margin: 1vh;
-  overflow-x: visible;
 }
 .Title{
   grid-column: 1/22;
@@ -184,10 +183,22 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
 
 }
 .logo{
-  background-image: url(https://cdn2.iconfinder.com/data/icons/menu-white/64/menu_white_buttom__navbar-512.png);
+  background-image: url('https://cdn-icons-png.flaticon.com/512/5973/5973800.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 1%;
-  grid-column: 1/6;
-  grid-row: 2/6;
+  background-size: 110%;
+  border-radius: 100vw;
+  grid-column: 2/6;
+  grid-row: 2/4;
+  border: 1vw solid white;
+}
+.aboutbox{
+  grid-column: 2/21;
+  grid-row:4/19;
+  background-color: rgba(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  box-shadow: 2vw 2vw 0.1vw rgb(136, 136, 136);
+  padding: 3vw;
 }

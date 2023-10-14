@@ -16,7 +16,7 @@ export default function Newpost() {
             longitude: position.coords.longitude,
             message: document.getElementById("message").value,
           });
-          console.log(response.data);
+          alert("Posted")
         } catch (error) {
           console.log(error.response);
           navigate("/login");

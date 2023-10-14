@@ -5,11 +5,11 @@ import Near from "./nearpost";
 import NewPost from "./newpost";
 
 export default function Home() {
-
+  let navigate=useNavigate();
 
   return (
     <>
-    {/* <div className="logo debug"></div> */}
+    <div className="logo" onClick={()=>{navigate('/about')}}></div>
     <p className="Gs">Get started</p>
     </>
   );

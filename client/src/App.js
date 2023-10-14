@@ -4,6 +4,7 @@ import Home from "./components/home";
 import Nearpost from "./components/nearpost";
 import Newpost from './components/newpost'
 import Nav from "./components/Nav";
+import About from "./components/about"
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/near" element={<Nearpost />} />
           <Route path="/new" element={<Newpost />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>
