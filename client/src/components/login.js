@@ -14,7 +14,7 @@ export default function Login() {
      let data={email:email.current.value,
                password:password.current.value}
       try{
-        let res=await axios.post('http://localhost:5000/user/login',data);
+        let res=await axios.post('https://geopost.onrender.com/user/login',data);
         res=res.data;
         console.log(res.data)
         localStorage.setItem('token',res.data.token)

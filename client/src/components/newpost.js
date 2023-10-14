@@ -10,7 +10,7 @@ export default function Newpost() {
         console.log(position);
         const token = localStorage.getItem("token");
         try {
-          let response = await axios.post("http://localhost:5000/post/new", {
+          let response = await axios.post("https://geopost.onrender.com/post/new", {
             token: token,
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,

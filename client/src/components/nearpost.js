@@ -12,7 +12,7 @@ export default function Nearpost() {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(async function (position) {
           try {
-            let response = await axios.post("http://localhost:5000/post/all", {
+            let response = await axios.post("https://geopost.onrender.com/post/all", {
               token: localStorage.getItem("token"),
               latitude: position.coords.latitude,
               longitude: position.coords.longitude,
