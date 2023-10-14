@@ -44,7 +44,7 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
   grid-row: 20;
   display: flex;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   border: rgb(0, 0, 0) solid 2px;
@@ -56,10 +56,9 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
   background-color: rgb(110, 159, 249);
   padding: 2vw;
   width: 30vw;
-  height: 8vh;
+  height: 6vh;
   margin: 2vw;
-  font-weight: bolder;
-  color: white;
+  color:black;
 }
 
 
@@ -146,6 +145,14 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
   border:2px solid black;
 
 }
+.NewBox{
+  grid-column: 2/21;
+  grid-row:4/19;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .NearPost{
   grid-column: 2/21;
   grid-row:4/19;
@@ -155,14 +162,32 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
   overflow-x: scroll;
 }
 .postmessage{
-  height: 40vh;
+  height: 50vh;
+  width: 80vw;
   margin: 1vh;
   overflow-x: visible;
 }
 .Title{
   grid-column: 1/22;
-  grid-row: 3/5;
+  grid-row: 2/3;
   text-align: center;
   font-size: 15vw;
   color: white;
+}
+
+.Gs{
+  font-size: 6vw;
+  grid-row: 18/20;
+  text-align: center;
+  grid-column: 2/21;
+  color :white;
+
+}
+.logo{
+  background-image: url(https://cdn2.iconfinder.com/data/icons/menu-white/64/menu_white_buttom__navbar-512.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1%;
+  grid-column: 1/6;
+  grid-row: 2/6;
 }
