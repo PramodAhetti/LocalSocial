@@ -186,11 +186,10 @@ box-shadow: 2vw 2vw 0.1vw rgb(91, 91, 91);
   background-image: url('https://cdn-icons-png.flaticon.com/512/5973/5973800.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: 120%;
   border-radius: 100vw;
-  grid-column: 2/6;
-  grid-row: 2/4;
-  border: 1vw solid white;
+  grid-column: 2/4;
+  grid-row: 2/3;
 }
 .aboutbox{
   grid-column: 2/21;
