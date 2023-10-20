@@ -1,13 +1,20 @@
 import React, { useEffect, useRef } from "react";
 
 const Near = (props) => {
-  const formattedTime = props.post.date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  console.log(`Post created at: ${formattedTime}`);
+const dateString = props.post.date;
+const timestamp = parseInt(dateString, 10);
+const now = new Date(timestamp);
+const hours = now.getHours().toString().padStart(2, '0'); // Add leading zero if needed
+const minutes = now.getMinutes().toString().padStart(2, '0');
+const seconds = now.getSeconds().toString().padStart(2, '0');
+const formattedTime = `${hours}:${minutes}:${seconds}`;
+console.log("Current time is: " + formattedTime);
   return (
     <div className="postbox">
+            
       <sub className="user">{props.post.name}</sub>
-      <sub className="message">{" : " + props.post.message}</sub>
-      <sub className="message">{" : " + formattedTime}</sub>
+      <sub className="message">{" : " + props.post.message}<sub className="date">{formattedTime}</sub></sub>
+
     </div>
   );
 };
