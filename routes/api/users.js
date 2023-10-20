@@ -30,7 +30,7 @@ async(req,res)=>{
                 name:user.name
             }
         }
-        let token=jwt.sign(payload,process.env.SECRETKEY,{expiresIn:'1h'});
+        let token=jwt.sign(payload,process.env.SECRETKEY,{expiresIn:'10h'});
            res.json({data:{token,id:user.id,name:user.name}});
        }else{
            res.status(400).json({err:'user doesnt exists'});

@@ -15,7 +15,7 @@ router.post('/all', userauth, async (req, res) => {
         }
 
         // Convert radius from kilometers to degrees (for MongoDB's $geoWithin operator)
-        const radiusInDegrees =0.000002;
+        const radiusInDegrees =radius;
 
         // Perform a geospatial query to find posts within the specified radius
         let nearbyPosts = await posts.find({
