@@ -16,7 +16,7 @@ export default function Nearpost() {
               token: localStorage.getItem("token"),
               latitude: position.coords.latitude,
               longitude: position.coords.longitude,
-              radius: 0.00001,
+              radius: 0.0001,
             });
             setPosts(response.data);
             console.log(response.data);
