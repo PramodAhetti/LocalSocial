@@ -8,7 +8,6 @@ const hours = now.getHours().toString().padStart(2, '0'); // Add leading zero if
 const minutes = now.getMinutes().toString().padStart(2, '0');
 const seconds = now.getSeconds().toString().padStart(2, '0');
 const formattedTime = `${hours}:${minutes}:${seconds}`;
-console.log("Current time is: " + formattedTime);
   return (
     <div className="postbox">
             

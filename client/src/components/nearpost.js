@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import Near from "./near";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { useSelector ,useDispatch} from 'react-redux'
 export default function Nearpost() {
   const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
+  const dispatch=useDispatch();
+  const nearpost=useSelector(state=>state.posts);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,8 +21,7 @@ export default function Nearpost() {
               longitude: position.coords.longitude,
               radius: 0.0001,
             });
-            setPosts(response.data);
-            console.log(response.data);
+            dispatch({type:"SETPOSTS",payload:response.data});
           } catch (error) {
             console.log(error);
             navigate("/login");
@@ -30,19 +32,14 @@ export default function Nearpost() {
       }
     };
 
-    fetchData(); // Call the fetchData function directly inside useEffect
-
-    // Cleanup function can be added if needed
-    // return () => {
-    //   cleanup code
-    // };
-  }, [navigate]); // Dependency array to re-run the effect when `navigate` changes
+    fetchData(); 
+  },[]); 
 
   return (
     <>
       <div className="Title">.GeoPost</div>
       <div className="chatbox">
-        {posts.map((data) => (
+        {nearpost.map((data) => (
           <Near key={data._id} post={data} />
         ))}
       </div>
